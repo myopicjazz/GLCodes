@@ -38,6 +38,12 @@ public abstract class AptComplex {
 	
 	public void setTotalUnits() {};		// This will always be overridden
 	
+	// And this will always be overridden as well
+	public double AddPhases(double d) {
+		double sum = 0;
+		return sum;
+	}
+	
 	/*CalculatePhaseCost method comes up with the amount of the invoice that will be
 	 * paid out of each phase of the apartment complex based on the number of units
 	 * in that phase
