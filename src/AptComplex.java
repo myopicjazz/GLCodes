@@ -36,9 +36,15 @@ public abstract class AptComplex {
 		return totalUnits;
 	}
 	
-	public void setTotalUnits() {};		// This will always be overridden
+	/* The next two methods will always be overridden. Making them abstract would require
+	 * the overriding methods to have the same number of parameters, not possible in these
+	 * cases.
+	 */
 	
-	// And this will always be overridden as well
+	// This will always be overridden
+	public void setTotalUnits() {};
+	
+	// And this will be, too
 	public double AddPhases(double d) {
 		double sum = 0;
 		return sum;

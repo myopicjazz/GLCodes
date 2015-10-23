@@ -31,5 +31,29 @@ public class Main {
 				complexTwo.getPhaseTwoCost());
 		System.out.println("Phase three - " + complexTwo.getPhaseThreeGL() + 
 				": $" + complexTwo.getPhaseThreeCost());
+		
+		FivePhaseComplex complexThree = new FivePhaseComplex("Complex Three", 240,
+				108, 36, 120, 96, "003", "004", "005", "006", "007");
+		
+		complexThree.setTotalUnits(complexThree.getPhaseOneUnits(), 
+				complexThree.getPhaseTwoUnits(), complexThree.getPhaseThreeUnits(),
+				complexThree.getPhaseFourUnits(), complexThree.getPhaseFiveUnits());
+		complexThree.setCostPerUnit(currentInvoice);
+		complexThree.setPhaseOneCost(complexThree.getCostPerUnit(), complexThree.getPhaseOneUnits());
+		complexThree.setPhaseTwoCost(complexThree.getCostPerUnit(), complexThree.getPhaseTwoUnits());
+		complexThree.setPhaseThreeCost(complexThree.getCostPerUnit(), complexThree.getPhaseThreeUnits());
+		complexThree.setPhaseFourCost(complexThree.getCostPerUnit(), complexThree.getPhaseFourUnits());
+		complexThree.setPhaseFiveCost(complexThree.getCostPerUnit(), complexThree.getPhaseFiveUnits());
+		System.out.println(complexTwo.getNameOfAptComplex());
+		System.out.println("Phase one - " + complexThree.getPhaseOneGL() + ": $" + 
+				complexThree.getPhaseOneCost());
+		System.out.println("Phase two - " + complexThree.getPhaseTwoGL() + ": $" + 
+				complexThree.getPhaseTwoCost());
+		System.out.println("Phase three - " + complexThree.getPhaseThreeGL() + 
+				": $" + complexThree.getPhaseThreeCost());
+		System.out.println("Phase four - " + complexThree.getPhaseFourGL() + 
+				": $" + complexThree.getPhaseFourCost());
+		System.out.println("Phase five - " + complexThree.getPhaseFiveGL() + 
+				": $" + complexThree.getPhaseFiveCost());
 	}
 }
