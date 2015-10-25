@@ -23,28 +23,22 @@ public abstract class AptComplex {
 		return costPerUnit;
 	}
 	
-	/*setPhaseCost divides the amount of the invoice by the number of apartments in the
+	/*setCostPerUnit divides the amount of the invoice by the number of apartments in the
 	*complex to come up with a cost for each unit in the apartment complex
 	*/
 	public void setCostPerUnit (BigDecimal invoice) {
 		BigDecimal tu = new BigDecimal(this.totalUnits);
 		costPerUnit = invoice.divide(tu, 20, RoundingMode.HALF_EVEN);
-		
 	}
 	
 	public double getTotalUnits() {
 		return totalUnits;
 	}
 	
-	/* The next two methods will always be overridden. Making them abstract would require
-	 * the overriding methods to have the same number of parameters, not possible in these
-	 * cases.
-	 */
-	
 	// This will always be overridden
 	public void setTotalUnits() {};
 	
-	// And this will be, too
+	// And this will be overridden in all classes except MultiPhaseComplex
 	public double AddPhases(double d) {
 		double sum = 0;
 		return sum;
@@ -54,7 +48,7 @@ public abstract class AptComplex {
 	 * paid out of each phase of the apartment complex based on the number of units
 	 * in that phase
 	 */
-	public BigDecimal CalculatePhaseCost (BigDecimal costPerUnit, double phase){
+	public BigDecimal CalculatePhaseCost (double phase){
 		BigDecimal phaseCost;
 		BigDecimal unitsInPhase = new BigDecimal(phase);
 		phaseCost = costPerUnit.multiply(unitsInPhase);

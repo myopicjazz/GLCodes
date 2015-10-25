@@ -74,9 +74,8 @@ public class FivePhaseComplex extends AptComplex{
 		return phaseFiveGL;
 	}
 	
-	public void setTotalUnits (double phaseOneUnits, double phaseTwoUnits, 
-			double phaseThreeUnits, double phaseFourUnits, double phaseFiveUnits){
-		totalUnits = AddPhases(phaseOneUnits, phaseTwoUnits, phaseThreeUnits,
+	public void setTotalUnits (){
+		totalUnits = AddPhases(phaseOneUnits, phaseTwoUnits, phaseThreeUnits, 
 				phaseFourUnits, phaseFiveUnits);
 	}
 
@@ -84,40 +83,40 @@ public class FivePhaseComplex extends AptComplex{
 		return phaseOneCost;
 	}
 	
-	public void setPhaseOneCost(BigDecimal costPerUnit, double p1){
-		phaseOneCost = CalculatePhaseCost(costPerUnit, p1);
+	public void setPhaseOneCost(){
+		phaseOneCost = CalculatePhaseCost(phaseTwoUnits);
 	}
 	
 	public BigDecimal getPhaseTwoCost() {
 		return phaseTwoCost;
 	}
 	
-	public void setPhaseTwoCost(BigDecimal costPerUnit, double p2){
-		phaseTwoCost = CalculatePhaseCost(costPerUnit, p2);
+	public void setPhaseTwoCost(){
+		phaseTwoCost = CalculatePhaseCost(phaseTwoUnits);
 	}
 	
 	public BigDecimal getPhaseThreeCost() {
 		return phaseThreeCost;
 	}
 	
-	public void setPhaseThreeCost(BigDecimal costPerUnit, double p3){
-		phaseThreeCost = CalculatePhaseCost(costPerUnit, p3);
+	public void setPhaseThreeCost(){
+		phaseThreeCost = CalculatePhaseCost(phaseThreeUnits);
 	}
 	
 	public BigDecimal getPhaseFourCost() {
 		return phaseFourCost;
 	}
 	
-	public void setPhaseFourCost(BigDecimal costPerUnit, double p4){
-		phaseFourCost = CalculatePhaseCost(costPerUnit, p4);
+	public void setPhaseFourCost(){
+		phaseFourCost = CalculatePhaseCost(phaseFourUnits);
 	}
 	
 	public BigDecimal getPhaseFiveCost() {
 		return phaseFiveCost;
 	}
 	
-	public void setPhaseFiveCost(BigDecimal costPerUnit, double p5){
-		phaseFiveCost = CalculatePhaseCost(costPerUnit, p5);
+	public void setPhaseFiveCost(){
+		phaseFiveCost = CalculatePhaseCost(phaseFiveUnits);
 	}
 	
 	private double AddPhases (double p1Units, double p2Units, double p3Units,

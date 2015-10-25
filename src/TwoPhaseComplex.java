@@ -33,7 +33,7 @@ public class TwoPhaseComplex extends AptComplex {
 		return phaseTwoGL;
 	}
 	
-	public void setTotalUnits (double phaseOneUnits, double phaseTwoUnits){
+	public void setTotalUnits (){
 		totalUnits = AddPhases(phaseOneUnits, phaseTwoUnits);
 	}
 	
@@ -41,16 +41,16 @@ public class TwoPhaseComplex extends AptComplex {
 		return phaseOneCost;
 	}
 	
-	public void setPhaseOneCost(BigDecimal costPerUnit, double p1){
-		phaseOneCost = CalculatePhaseCost(costPerUnit, p1);
+	public void setPhaseOneCost(){
+		phaseOneCost = CalculatePhaseCost(phaseOneUnits);
 	}
 	
 	public BigDecimal getPhaseTwoCost() {
 		return phaseTwoCost;
 	}
 	
-	public void setPhaseTwoCost(BigDecimal costPerUnit, double p2){
-		phaseTwoCost = CalculatePhaseCost(costPerUnit, p2);
+	public void setPhaseTwoCost(){
+		phaseTwoCost = CalculatePhaseCost(phaseTwoUnits);
 	}
 	
 	private double AddPhases (double p1Units, double p2Units){
