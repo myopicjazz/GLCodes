@@ -54,7 +54,7 @@ public class MultiPhaseComplex extends AptComplex {
 		}
 	}
 	
-	public void getCostPerPhase() {
+	public void ShowCostPerPhase() {
 		int i = 0;
 		for ( BigDecimal phaseCost : costPerPhase) {
 			System.out.println("Cost for " + phaseGLs[i] + ": $" + phaseCost);

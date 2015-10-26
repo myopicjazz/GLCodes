@@ -130,7 +130,7 @@ public class Main {
 			otherComplex.setCostPerPhase();
 			System.out.println("");
 			System.out.println(otherComplex.getNameOfAptComplex());
-			otherComplex.getCostPerPhase();
+			otherComplex.ShowCostPerPhase();
 			break;
 		default: 
 			System.out.println("");
