@@ -84,7 +84,7 @@ public class FivePhaseComplex extends AptComplex{
 	}
 	
 	public void setPhaseOneCost(){
-		phaseOneCost = CalculatePhaseCost(phaseTwoUnits);
+		phaseOneCost = CalculatePhaseCost(phaseOneUnits);
 	}
 	
 	public BigDecimal getPhaseTwoCost() {
