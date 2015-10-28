@@ -29,7 +29,7 @@ public class Main {
 				selection = Integer.valueOf(propNumber.trim());
 			}
 			catch (java.util.InputMismatchException e) {
-				System.err.println("You need to re-effort that one.");
+				System.err.println("You need to re-effort once more.");
 			}
 		}
 		System.out.print("Enter amount of invoice: ");
